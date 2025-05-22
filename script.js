@@ -290,8 +290,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Build the WhatsApp message
-        let message = `*Nuevo Pedido - Frutera Calixto*\n\n`;
-        message += `*Tipo de Pedido:* ${deliveryOption === 'pickup' ? 'Recoger en Tienda' : 'Domicilio'}\n`;
+        let message = `*Nuevo Pedido - FrutasLight*\n\n`;
+        message += `*Tipo de Pedido:* ${deliveryOption === 'pickup' ? 'Recoger en Tienda' : 'A domicilio'}\n`;
         message += `*Cliente:* ${name}\n`;
         if (deliveryOption === 'delivery') {
             message += `*Dirección:* ${address}\n`;
