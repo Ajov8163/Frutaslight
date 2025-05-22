@@ -1,0 +1,149 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrutasLight</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 >FrutasLight</h1>
+        <nav>
+            <button data-category="todos">Todos</button>
+            <button data-category="agua">Jugos en Agua</button>
+            <button data-category="leche">Jugos en Leche</button>
+            <button data-category="batidos">Batidos</button>
+            <button data-category="sandwich">Sandwich</button>
+            <button data-category="ensaladas">Ensaladas de Frutas</button>
+        </nav>
+        <div class="store-info-section">
+            <!-- <p class="juice-benefits">Nuestros jugos naturales son una fuente increíble de vitaminas y energía para tu día. ¡Disfruta de la frescura y vitalidad en cada sorbo!</p> -->
+            <div class="store-status-container">
+                <span id="store-status" class="status-indicator">Cargando estado...</span>
+                <div id="opening-hours-details" class="opening-hours-details hidden">
+                    <h4>Horario de Atención:</h4>
+                    <p>Lunes a Viernes: 8:00 AM - 8:00 PM</p>
+                    <p>Sábados: 9:00 AM - 6:00 PM</p>
+                    <p>Domingos: Cerrado</p>
+                </div>
+            </div>
+        </div>
+        <div class="cart-icon-container">
+             <img class="imgcar" src="/img/shopping-cart.png" alt="Carrito" id="cart-icon">
+             <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <main id="product-grid">
+        <!-- Product cards will be loaded here -->
+    </main>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-cart">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <div id="cart-items">
+                <!-- Cart items will be loaded here -->
+                <p>Tu carrito está vacío.</p>
+            </div>
+            <div id="cart-summary">
+                <p>Total: <span id="cart-total">$0</span></p>
+                <button id="checkout-button">Proceder al Pago</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-checkout">&times;</span>
+            <h2>Información de Entrega</h2>
+            <form id="checkout-form">
+                <p class="delivery-selection-message">Por favor seleccione cómo desea recibir su pedido:</p>
+                <div class="delivery-options">
+                    <label class="delivery-option-label">
+                        <input type="radio" name="delivery-option" value="pickup">
+                        Recoger en Tienda
+                    </label>
+                    <label class="delivery-option-label">
+                        <input type="radio" name="delivery-option" value="delivery">
+                        Envío a Domicilio
+                    </label>
+                </div> 
+
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="address">Dirección:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="notes">Notas Adicionales:</label>
+                <textarea id="notes" name="notes" rows="3"></textarea>
+
+                <label for="payment-method">Método de Pago:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="cash">Efectivo</option>
+                    <option value="transfer">Transferencia</option>
+                </select>
+
+                <div id="transfer-info" class="hidden transfer-info-box">
+                    <div class="transfer-details">
+                        <span class="bank-icon">🏦</span>
+                        <div>
+                            <div class="account-label">Cuenta Bancolombia Ahorros</div>
+                            <div class="account-number" id="account-number">97835512649</div>
+                        </div>
+                    </div>
+                    <button type="button" id="copy-account-btn" class="copy-btn">
+                        <span class="copy-icon">📋</span> Copiar número de cuenta
+                    </button>
+                    <span id="copy-success" class="copy-success-msg">¡Copiado!</span>
+                </div>
+
+                <p class="delivery-note">El valor del domicilio varía según a donde se lleva el pedido.</p>
+                
+                <h3>Resumen del Pedido</h3>
+                <div id="order-summary"></div>
+                <p>Total a pagar: <span id="checkout-total">$0</span></p>
+
+                <button type="submit">Enviar Pedido por WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Frutera Calixto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const paymentSelect = document.getElementById('payment-method');
+        const transferInfo = document.getElementById('transfer-info');
+        const copyBtn = document.getElementById('copy-account-btn');
+        const accountNumber = document.getElementById('account-number');
+        const copySuccess = document.getElementById('copy-success');
+
+        paymentSelect.addEventListener('change', function() {
+            if (this.value === 'transfer') {
+                transferInfo.classList.remove('hidden');
+            } else {
+                transferInfo.classList.add('hidden');
+            }
+        });
+
+        copyBtn.addEventListener('click', function() {
+            navigator.clipboard.writeText(accountNumber.textContent).then(function() {
+                copySuccess.style.display = 'inline';
+                setTimeout(() => copySuccess.style.display = 'none', 1500);
+            });
+        });
+    </script>
+</body>
+</html>
