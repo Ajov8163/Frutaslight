@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="En valledupar-cesar FrutasLight: Jugos naturales, batidos, ensaladas de frutas y más. Disfruta productos frescos y saludables.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FrutasLight</title>
+    <title>FrutasLigth</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,17 +12,18 @@
 </head>
 <body>
     <header>
-        <h1 >FrutasLight</h1>
+        <h1 >FrutasLigth</h1>
         <nav>
             <button data-category="todos">Todos</button>
-            <button data-category="agua">Jugos en Agua</button>
-            <button data-category="leche">Jugos en Leche</button>
+            <button data-category="naturales">Jugos en Naturales</button>
+            <button data-category="especiales">Jugos Especiales</button>
             <button data-category="batidos">Batidos</button>
             <button data-category="sandwich">Sandwich</button>
             <button data-category="ensaladas">Ensaladas de Frutas</button>
         </nav>
+
+        <!-- //informacion del horario -->
         <div class="store-info-section">
-            <!-- <p class="juice-benefits">Nuestros jugos naturales son una fuente increíble de vitaminas y energía para tu día. ¡Disfruta de la frescura y vitalidad en cada sorbo!</p> -->
             <div class="store-status-container">
                 <span id="store-status" class="status-indicator">Cargando estado...</span>
                 <div id="opening-hours-details" class="opening-hours-details hidden">
@@ -33,6 +34,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- carrito de compras -->
         <div class="cart-icon-container">
              <img class="imgcar" src="/img/shopping-cart.png" alt="Carrito" id="cart-icon">
              <span id="cart-count">0</span>
@@ -43,6 +46,7 @@
         <!-- Product cards will be loaded here -->
     </main>
 
+    <!-- description del carrito -->
     <div id="cart-modal" class="modal">
         <div class="modal-content">
             <span class="close-button" id="close-cart">&times;</span>
@@ -58,6 +62,7 @@
         </div>
     </div>
 
+    <!-- Modal para checkout -->
     <div id="checkout-modal" class="modal">
         <div class="modal-content">
             <span class="close-button" id="close-checkout">&times;</span>
@@ -123,7 +128,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2023 FrutasLight. Todos los derechos reservados.</p>
+        <p>&copy; 2025 FrutasLigth. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>

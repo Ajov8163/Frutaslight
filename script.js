@@ -33,18 +33,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Product Data ---
     const products = [
-        { id: 1, name: "Jugo de Naranja", category: "agua", price: 5000, image: "/img/jugo_naranja.png", description: "Fresco jugo de naranja 100% natural." },
-        { id: 2, name: "Jugo de Mora", category: "agua", price: 5000, image: "/img/jugo_mora_agua.png", description: "Delicioso jugo de mora fresca en agua." },
-        { id: 3, name: "Limonada Natural", category: "agua", price: 4500, image: "/img/limonada_natural.png", description: "Refrescante limonada hecha al instante." },
-        { id: 14, name: "Jugo de Lulo", category: "agua", price: 5000, image: "/img/jugo_lulo_agua.png", description: "Ácido y refrescante jugo de lulo en agua." },
-        { id: 15, name: "Jugo de Maracuyá", category: "agua", price: 5000, image: "/img/jugo_maracuya_agua.png", description: "Intenso sabor tropical de maracuyá en agua." },
+        // jugos naturales
+        { id: 1, name: "Jugo de Zapote", category: "naturales", price: 10000, image: "/img/zapote.png", description: "Cremoso, fruta exótica rica en fibra, vitaminas A y C." },
+        { id: 2, name: "Jugo de Lulo", category: "naturales", price: 8000, image: "/img/lulo.png", description: "Refrescante y ligeramente ácido, rico en vitamina C." },
+        { id: 3, name: "Tomate de Arbol", category: "naturales", price: 8000, image: "/img/tomate.png", description: "Suave, ácido y refrescante. ¡Vitalidad natural para tu día!." },
+        { id: 14, name: "Jugo de Fresa", category: "naturales", price: 9000, image: "/img/fresa.png", description: "Dulce, suave y delicioso. ¡Antioxidantes naturales para tu bienestar!." },
+        { id: 15, name: "Jugo de Mora", category: "naturales", price: 8000, image: "/img/mora.png", description: " Intenso, frutal y refrescante. ¡Nutrientes naturales para tu bienestar!." },
+        { id: 24, name: "Jugo de Nispero", category: "naturales", price: 8000, image: "/img/nispero.png", description: "Refrescante y dulce, fuente de vitaminas y minerales ." },
+        { id: 25, name: "Jugo de Patilla", category: "naturales", price: 8000, image: "/img/patilla.png", description: " Refrescante, ligero y dulce. ¡Hidratación tropical para tu cuerpo!" },
+        { id: 26, name: "Jugo de Piña", category: "naturales", price: 8000, image: "/img/piña.png", description: "Tropical, jugoso y vibrante. ¡Digestión ligera con cada sorbo!" },
+        { id: 27, name: "Jugo de Papaya", category: "naturales", price: 8000, image: "/img/papaya.png", description: "Cremoso, suave y tropical. ¡Digestión natural y sabor ligero!" },
+        { id: 28, name: "Jugo de Melon", category: "naturales", price: 8000, image: "/img/melon.png", description: "Dulce, jugoso y refrescante. ¡Hidratación suave con sabor natural!" },
+        { id: 29, name: "Jugo de Curuba", category: "naturales", price: 8000, image: "/img/curuba.png", description: "Ácido, cremoso y refrescante. ¡Relajante y lleno de vitamina C!" },
+        { id: 30, name: "Jugo de Milo", category: "naturales", price: 8000, image: "/img/milo.png", description: "Cremoso, energético y delicioso. ¡Fuerza y sabor en cada sorbo!" },
+        { id: 31, name: "Jugo de Naranja", category: "naturales", price: 8000, image: "/img/naranja.png", description: "Cítrico, fresco y natural. ¡Vitamina C que revitaliza tu día!" },
+        { id: 32, name: "Jugo de Guanabana", category: "naturales", price: 8000, image: "/img/guanabana.png", description: " Cremoso, suave y tropical. ¡Refuerza tus defensas naturalmente!" },
+        { id: 33, name: "Jugo de Limonada", category: "naturales", price: 8000, image: "/img/limonada.png", description: "Ácida, fresca y burbujeante. ¡Hidratación y energía al instante!" },
+        { id: 34, name: "Limonada Cerezada", category: "naturales", price: 10000, image: "/img/limo-cere.png", description: "Dulce, cítrica y vibrante. ¡Refrescante y llena de energía natural!" },
+        { id: 35, name: "Jugo de Cerelac", category: "naturales", price: 12000, image: "/img/cerelac.png", description: "Cremosa, suave y nutritiva. ¡Energía y sabor para grandes y chicos!" },
 
-        { id: 4, name: "Jugo de Fresa en Leche", category: "leche", price: 6000, image: "/img/jugo_fresa_leche.png", description: "Cremoso jugo de fresa con leche." },
-        { id: 5, name: "Jugo de Guanábana en Leche", category: "leche", price: 6500, image: "/img/jugo_guanabana_leche.png", description: "Exótico y cremoso jugo de guanábana." },
-        { id: 6, name: "Jugo de Mango en Leche", category: "leche", price: 6000, image: "/img/jugo_mango_leche.png", description: "Dulce y suave jugo de mango en leche." },
-        { id: 16, name: "Jugo de Banano en Leche", category: "leche", price: 5500, image: "/img/jugo_banano_leche.png", description: "Nutritivo y clásico jugo de banano en leche." },
-        { id: 17, name: "Jugo de Mora en Leche", category: "leche", price: 6000, image: "/img/jugo_mora_leche.png", description: "Combinación perfecta de mora y leche." },
 
+        //jugos especiales
+        { id: 4, name: "Frutos Rojos", category: "especiales", price: 10000, image: "/img/frutos-rojos.png", description: "Mora, fresa, uva isabelita, cereza y arandanos" },
+        { id: 5, name: "Frutos Amarillos", category: "especiales", price: 6500, image: "/img/frutos-ama.png", description: "Maracuya, piña y naranja" },
+        { id: 6, name: "Jugo de Mango en Leche", category: "especiales", price: 6000, image: "/img/jugo_mango_leche.png", description: "Dulce y suave jugo de mango en leche." },
+        { id: 16, name: "Jugo de Banano en Leche", category: "especiales", price: 5500, image: "/img/jugo_banano_leche.png", description: "Nutritivo y clásico jugo de banano en leche." },
+        { id: 17, name: "Jugo de Mora en Leche", category: "especiales", price: 6000, image: "/img/jugo_mora_leche.png", description: "Combinación perfecta de mora y leche." },
+
+
+
+
+
+        
         { id: 7, name: "Batido Verde Detox", category: "batidos", price: 7000, image: "/img/batido_verde.png", description: "Saludable batido con espinaca, piña y apio." },
         { id: 8, name: "Batido Energético", category: "batidos", price: 7500, image: "/img/batido_energetico.png", description: "Batido con banano, avena y leche de almendras." },
         { id: 9, name: "Batido Frutos Rojos", category: "batidos", price: 7500, image: "/img/batido_frutos_rojos.png", description: "Antioxidante batido con mix de frutos rojos." },
