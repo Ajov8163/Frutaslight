@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/img/header_background.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.676), rgba(0, 0, 0, 0.3)), url('/img/fondo4.png');
     background-size: cover;
     background-position: center;
     color: white;
@@ -163,6 +163,7 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    background-color: rgb(255, 250, 244);
 }
 
 .product-card {
@@ -513,6 +514,7 @@ footer {
         flex-direction: column;
         padding: 1.5rem 1rem;
         text-align: center;
+         background-image: linear-gradient(rgba(0, 0, 0, 0.676), rgba(0, 0, 0, 0.3)), url('/img/fondo2.jpg');
     
     }
      header h1 {
@@ -556,6 +558,11 @@ footer {
 }
 
 @media (max-width: 480px) {
+    
+    header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.676), rgba(0, 0, 0, 0.3)), url('/img/fondo3.png');
+    }
+
      header h1 {
         font-size: 2.5rem;
     }

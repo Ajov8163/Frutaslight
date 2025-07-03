@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const openingHours = {
         // 0: Sunday, 1: Monday, ..., 6: Saturday
         0: null, // Sunday: Closed
-        1: { open: 8, close: 20 },  // Monday: 8 AM - 8 PM
-        2: { open: 8, close: 20 },  // Tuesday: 8 AM - 8 PM
-        3: { open: 8, close: 20 },  // Wednesday: 8 AM - 8 PM
-        4: { open: 8, close: 20 },  // Thursday: 8 AM - 8 PM
-        5: { open: 8, close: 20 },  // Friday: 8 AM - 8 PM
-        6: { open: 9, close: 18 }   // Saturday: 9 AM - 6 PM
+        1: { open: 7, close: 21 },  // Monday: 8 AM - 8 PM
+        2: { open: 7, close: 21 },  // Tuesday: 8 AM - 8 PM
+        3: { open: 7, close: 21 },  // Wednesday: 8 AM - 8 PM
+        4: { open: 7, close: 21 },  // Thursday: 8 AM - 8 PM
+        5: { open: 7, close: 21 },  // Friday: 8 AM - 8 PM
+        6: { open: 7, close: 11 }   // Saturday: 9 AM - 6 PM
     };
 
     // --- Product Data ---
@@ -48,14 +48,15 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 30, name: "Jugo de Milo", category: "naturales", price: 8000, image: "/img/milo.png", description: "Cremoso, energético y delicioso. ¡Fuerza y sabor en cada sorbo!" },
         { id: 31, name: "Jugo de Naranja", category: "naturales", price: 8000, image: "/img/naranja.png", description: "Cítrico, fresco y natural. ¡Vitamina C que revitaliza tu día!" },
         { id: 32, name: "Jugo de Guanabana", category: "naturales", price: 8000, image: "/img/guanabana.png", description: " Cremoso, suave y tropical. ¡Refuerza tus defensas naturalmente!" },
-        { id: 33, name: "Jugo de Limonada", category: "naturales", price: 8000, image: "/img/limonada.png", description: "Ácida, fresca y burbujeante. ¡Hidratación y energía al instante!" },
+        { id: 33, name: "Limonada Natural", category: "naturales", price: 8000, image: "/img/limonada.png", description: "Ácida, fresca y burbujeante. ¡Hidratación y energía al instante!" },
         { id: 34, name: "Limonada Cerezada", category: "naturales", price: 10000, image: "/img/limo-cere.png", description: "Dulce, cítrica y vibrante. ¡Refrescante y llena de energía natural!" },
         { id: 35, name: "Jugo de Cerelac", category: "naturales", price: 12000, image: "/img/cerelac.png", description: "Cremosa, suave y nutritiva. ¡Energía y sabor para grandes y chicos!" },
 
 
+        
         //jugos especiales
         { id: 4, name: "Frutos Rojos", category: "especiales", price: 10000, image: "/img/frutos-rojos.png", description: "Mora, fresa, uva isabelita, cereza y arandanos." },
-        { id: 5, name: "Frutos Amarillos", category: "especiales", price: 6500, image: "/img/frutos-ama.png", description: "Maracuya, piña y naranja." },
+        { id: 5, name: "Frutos Amarillos", category: "especiales", price: 10000, image: "/img/frutos-ama.png", description: "Maracuya, piña y naranja." },
         { id: 6, name: "Frutos Verdes", category: "especiales", price: 10000, image: "/img/frutos-ver.png", description: "Espinaca, pepino, manzana verde, piña y limon." },
         { id: 16, name: "Borojo Completo", category: "especiales", price: 10000, image: "/img/borojo.png", description: "Borojó, kola granulada, huevo de codorniz, vitafer, milo, miel de abeja y mero macho." },
         { id: 17, name: "Manzana roja", category: "especiales", price: 8000, image: "/img/manzana.png", description: "Dulce, suave y jugoso. ¡Frescura natural para tu bienestar!." },
@@ -66,22 +67,50 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 7, name: "Papaya y Naranja", category: "combinados", price: 10000, image: "/img/papa-nara.png", description: " Suave, cítrico y tropical. ¡Digestión ligera y vitamina C en cada sorbo!." },
         { id: 8, name: "Naranja y Piña", category: "combinados", price: 10000, image: "/img/nara-pi.png", description: "Cítrico, dulce y vibrante. ¡Refresca y llena de energía cada momento!." },
         { id: 9, name: "Guanabana y Fresa", category: "combinados", price: 10000, image: "/img/gua-fre.png", description: "Cremoso y refrescante. ¡Sabor tropical que acaricia el paladar y fortalece tus defensas!." },
-        // vamos x aqui
+        { id: 18, name: "Fresa y Mandarina", category: "combinados", price: 10000, image: "/img/fre-man.png", description: "Ácido, dulce y chispeante. ¡Vitamina C y frescura que despiertan tus sentidos!." },
+        { id: 19, name: "Lulo y Kiwi", category: "combinados", price: 10000, image: "/img/lu-ki.png", description: "Exótico, ácido y refrescante. ¡Vitamina C y sabor tropical que estimulan cada célula!." },
+        { id: 37, name: "Banana y Milo", category: "combinados", price: 10000, image: "/img/bana-mil.png", description: "Cremoso, energético y reconfortante. ¡Nutrición completa y sabor que conquista a todos!." },
 
 
+
+        // fresas con crema
+        { id: 10, name: "Con helado", category: "fresas", price: 12000, image: "/img/sandwich_pollo.png", description: "Pan artesanal, pollo desmechado, lechuga y tomate." },
+        { id: 11, name: "Con chantilly", category: "fresas", price: 16000, image: "/img/sandwich_jamon_queso.png", description: "Clásico sandwich con jamón de pavo y queso." },
+
+
+
+        // tuti fruti
+        { id: 20, name: "Natural", category: "tuti", price: 7000, image: "/img/sandwich_vegetariano.png", description: "Queso mozzarella, tomate, aguacate y rúcula." },
+        { id: 21, name: "Leche", category: "tuti", price: 8000, image: "/img/sandwich_especial.png", description: "Pernil de cerdo, queso doble crema y salsa de la casa." },
+        { id: 38, name: "Mixto", category: "tuti", price: 9000, image: "/img/sandwich_especial.png", description: "Pernil de cerdo, queso doble crema y salsa de la casa." },
+        { id: 39, name: "Especial", category: "tuti", price: 12000, image: "/img/sandwich_especial.png", description: "Pernil de cerdo, queso doble crema y salsa de la casa." },
+        { id: 40, name: "Parfait", category: "tuti", price: 12000, image: "/img/sandwich_especial.png", description: "Pernil de cerdo, queso doble crema y salsa de la casa." },
+        { id: 41, name: "Porcion de frutas", category: "tuti", price: 7000, image: "/img/sandwich_especial.png", description: "Pernil de cerdo, queso doble crema y salsa de la casa." },
+
+
+        // ensaladas de frutas
+        { id: 12, name: "Sencilla", category: "ensaladas", price: 10000, image: "/img/ensalada_frutas_clasica.png", description: "Papaya, melon, piña, patilla, banano, uva, manzana verde, kiwi y mandarina." },
+        { id: 13, name: "De la casa", category: "ensaladas", price: 17000, image: "/img/ensalada_frutas_tropical.png", description: "Papaya, melon, piña, patilla, banano, uva, manzana verde, kiwi, mandarina, helado, leche condensada y queso." },
+        { id: 22, name: "Cítrica", category: "ensaladas", price: 12000, image: "/img/ensalada_fit.png", description: "Piña, manzana verde, kiwi, fresa, mango biche, sal, limon y tajin." },
+        { id: 23, name: "Banana split", category: "ensaladas", price: 17000, image: "/img/copa_calixto.png", description: "Capas de fruta, helado, crema, queso y barquillo." },
+
+
+
+        // sandwich
+        { id: 42, name: "Sencillo", category: "sandwich", price: 4000, image: "/img/copa_calixto.png", description: "Jamon y queso." },
+        { id: 43, name: "Especial", category: "sandwich", price: 10000, image: "/img/copa_calixto.png", description: "Pan, verduras, quesillo, jamon de pavo y salsas." },
+        { id: 44, name: "Minicubano", category: "sandwich", price: 8000, image: "/img/copa_calixto.png", description: "Pan, verduras, quesillo, jamon de pavo y salsas." },
+        { id: 45, name: "Cubano", category: "sandwich", price: 12000, image: "/img/copa_calixto.png", description: "Pan, verduras, quesillo, jamon de pavo y salsas." },
+
+
+
+        // desayuno
+        { id: 46, name: "Huevos con queso mozzarella", category: "desayuno", price: 12000, image: "/img/copa_calixto.png", description: "Huevos, queso y pan." },
+        { id: 47, name: "Huevos con jamóm", category: "desayuno", price: 12000, image: "/img/copa_calixto.png", description: "Huevos, jamon y pan." },
+        { id: 48, name: "Huevos pericos", category: "desayuno", price: 12000, image: "/img/copa_calixto.png", description: "Huevos, tomate, cebolla y pan." },
         
-        { id: 18, name: "Batido Tropical Power", category: "combinados", price: 7500, image: "/img/batido_tropical.png", description: "Explosión de sabor con mango, piña y naranja." },
-        { id: 19, name: "Batido Post-Entreno", category: "combinados", price: 8000, image: "/img/batido_proteina.png", description: "Recuperador con proteína whey, banano y mantequilla de maní." },
 
-        { id: 10, name: "Sandwich de Pollo", category: "sandwich", price: 8000, image: "/img/sandwich_pollo.png", description: "Pan artesanal, pollo desmechado, lechuga y tomate." },
-        { id: 11, name: "Sandwich Jamón y Queso", category: "sandwich", price: 7000, image: "/img/sandwich_jamon_queso.png", description: "Clásico sandwich con jamón de pavo y queso." },
-        { id: 20, name: "Sandwich Vegetariano", category: "sandwich", price: 7500, image: "/img/sandwich_vegetariano.png", description: "Queso mozzarella, tomate, aguacate y rúcula." },
-        { id: 21, name: "Sandwich Calixto Especial", category: "sandwich", price: 9000, image: "/img/sandwich_especial.png", description: "Pernil de cerdo, queso doble crema y salsa de la casa." },
 
-        { id: 12, name: "Ensalada de Frutas Clásica", category: "ensaladas", price: 9000, image: "/img/ensalada_frutas_clasica.png", description: "Mix de frutas frescas con queso y crema." },
-        { id: 13, name: "Ensalada de Frutas Tropical", category: "ensaladas", price: 9500, image: "/img/ensalada_frutas_tropical.png", description: "Frutas tropicales, coco rallado y lecherita." },
-        { id: 22, name: "Ensalada Fit", category: "ensaladas", price: 10000, image: "/img/ensalada_fit.png", description: "Frutas, granola casera, yogurt griego y miel." },
-        { id: 23, name: "Copa Calixto", category: "ensaladas", price: 11000, image: "/img/copa_calixto.png", description: "Capas de fruta, helado, crema, queso y barquillo." }
     ];
 
     let cart = JSON.parse(localStorage.getItem('fruteraCart')) || []; // Load cart from local storage
