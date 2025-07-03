@@ -54,22 +54,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         //jugos especiales
-        { id: 4, name: "Frutos Rojos", category: "especiales", price: 10000, image: "/img/frutos-rojos.png", description: "Mora, fresa, uva isabelita, cereza y arandanos" },
-        { id: 5, name: "Frutos Amarillos", category: "especiales", price: 6500, image: "/img/frutos-ama.png", description: "Maracuya, piña y naranja" },
-        { id: 6, name: "Jugo de Mango en Leche", category: "especiales", price: 6000, image: "/img/jugo_mango_leche.png", description: "Dulce y suave jugo de mango en leche." },
-        { id: 16, name: "Jugo de Banano en Leche", category: "especiales", price: 5500, image: "/img/jugo_banano_leche.png", description: "Nutritivo y clásico jugo de banano en leche." },
-        { id: 17, name: "Jugo de Mora en Leche", category: "especiales", price: 6000, image: "/img/jugo_mora_leche.png", description: "Combinación perfecta de mora y leche." },
+        { id: 4, name: "Frutos Rojos", category: "especiales", price: 10000, image: "/img/frutos-rojos.png", description: "Mora, fresa, uva isabelita, cereza y arandanos." },
+        { id: 5, name: "Frutos Amarillos", category: "especiales", price: 6500, image: "/img/frutos-ama.png", description: "Maracuya, piña y naranja." },
+        { id: 6, name: "Frutos Verdes", category: "especiales", price: 10000, image: "/img/frutos-ver.png", description: "Espinaca, pepino, manzana verde, piña y limon." },
+        { id: 16, name: "Borojo Completo", category: "especiales", price: 10000, image: "/img/borojo.png", description: "Borojó, kola granulada, huevo de codorniz, vitafer, milo, miel de abeja y mero macho." },
+        { id: 17, name: "Manzana roja", category: "especiales", price: 8000, image: "/img/manzana.png", description: "Dulce, suave y jugoso. ¡Frescura natural para tu bienestar!." },
+        { id: 36, name: "Manzana verde", category: "especiales", price: 8000, image: "/img/man-ver.png", description: "Ácido, crujiente y refrescante. ¡Desintoxica y revitaliza naturalmente!." },
 
 
-
+        // combinados
+        { id: 7, name: "Papaya y Naranja", category: "combinados", price: 10000, image: "/img/papa-nara.png", description: " Suave, cítrico y tropical. ¡Digestión ligera y vitamina C en cada sorbo!." },
+        { id: 8, name: "Naranja y Piña", category: "combinados", price: 10000, image: "/img/nara-pi.png", description: "Cítrico, dulce y vibrante. ¡Refresca y llena de energía cada momento!." },
+        { id: 9, name: "Guanabana y Fresa", category: "combinados", price: 10000, image: "/img/gua-fre.png", description: "Cremoso y refrescante. ¡Sabor tropical que acaricia el paladar y fortalece tus defensas!." },
+        // vamos x aqui
 
 
         
-        { id: 7, name: "Batido Verde Detox", category: "batidos", price: 7000, image: "/img/batido_verde.png", description: "Saludable batido con espinaca, piña y apio." },
-        { id: 8, name: "Batido Energético", category: "batidos", price: 7500, image: "/img/batido_energetico.png", description: "Batido con banano, avena y leche de almendras." },
-        { id: 9, name: "Batido Frutos Rojos", category: "batidos", price: 7500, image: "/img/batido_frutos_rojos.png", description: "Antioxidante batido con mix de frutos rojos." },
-        { id: 18, name: "Batido Tropical Power", category: "batidos", price: 7500, image: "/img/batido_tropical.png", description: "Explosión de sabor con mango, piña y naranja." },
-        { id: 19, name: "Batido Post-Entreno", category: "batidos", price: 8000, image: "/img/batido_proteina.png", description: "Recuperador con proteína whey, banano y mantequilla de maní." },
+        { id: 18, name: "Batido Tropical Power", category: "combinados", price: 7500, image: "/img/batido_tropical.png", description: "Explosión de sabor con mango, piña y naranja." },
+        { id: 19, name: "Batido Post-Entreno", category: "combinados", price: 8000, image: "/img/batido_proteina.png", description: "Recuperador con proteína whey, banano y mantequilla de maní." },
 
         { id: 10, name: "Sandwich de Pollo", category: "sandwich", price: 8000, image: "/img/sandwich_pollo.png", description: "Pan artesanal, pollo desmechado, lechuga y tomate." },
         { id: 11, name: "Sandwich Jamón y Queso", category: "sandwich", price: 7000, image: "/img/sandwich_jamon_queso.png", description: "Clásico sandwich con jamón de pavo y queso." },
